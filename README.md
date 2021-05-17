@@ -60,15 +60,20 @@ acciones:
 - sem extrasListo;*
 
 como funcionan las funciones con los semáforos
-p= wait(-)
-v= signal(+)
+```
 
-`Cortar()
-V(S_mezclar)
+`P= WAIT(-)
+V= SIGNAL(+)`
 
-P(S_mezclar)
+´´´
+Cortar()
+V(Sem_mezclar)
+
+
+P(Sem_mezclar)
 Mezclar()
-V(S_salar)
+V(Sem_salar)
+
 
 P(Sem_salar)
 P(Mutex_salero)
@@ -76,32 +81,40 @@ Salar()
 V(Mutex_salero)
 V(Sem_agregarcarne)
 
+
 P(Sem_agregarcarne)
 Agregarcarne()
 V(Sem_empanar)
 
+
 P(Sem_empanar)
 Empanar()
-V(Sem_cocinarmilanesa)
+V(Sem_cocinarMilanesa)
+
 
 P(Sem_cocinarmilanesa)
 P(Mutex_sarten)
-Cocinarmilanesa()
+cocinarMilanesa()
 V(Mutex_sarten)
-V(Sem_panlisto)
+V(Sem_milanesaLista)
 
-P(Semhorno)
-Hornear()
+
+P(semHorno)
+hornear()
 V(Semhorno)
-V(Semhorno)
+v(sem_panListo)
+
 
 Cortarextras()
-V(Sem_extraslisto)
+V(Sem_extrasListo)
 
-P(Sem_panlisto)
-P(Sem_milanesalista)
-P(Sem_extraslisto)
-Armarsanguche()`
+P(Sem_panListo)
+P(Sem_milanesaLista)
+P(Sem_extrasListo)
+Armarsanguche()
+
+```
+
 
 Para armar la estructura de mi programa tuve en cuenta el código base que pasaron, y a partir de los ejemplos que teníamos, cree las funciones, coloque los semáforos correspondientes para cada acción y genere un archivo .txt para la receta.
 
